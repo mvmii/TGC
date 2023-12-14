@@ -14,3 +14,7 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+for i in range(5):
+    print(' ' * (5 - i - 1) + '*' * (2 * i + 1))
+
+print(' ' * 4 + '|')
