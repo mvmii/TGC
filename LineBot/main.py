@@ -18,3 +18,9 @@ for i in range(5):
     print(' ' * (5 - i - 1) + '*' * (2 * i + 1))
 
 print(' ' * 4 + '|')
+
+# 匯入file2的app
+
+from file2 import app
+
+test = app
