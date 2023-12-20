@@ -14,7 +14,21 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-for i in range(5):
-    print(' ' * (5 - i - 1) + '*' * (2 * i + 1))
+from flask import *
 
-print(' ' * 4 + '|')
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    data=[{'name': 'rose 1', 'value': 40},
+        {'name': 'rose 2', 'value': 38},
+        {'name': 'rose 3', 'value': 32},
+        {'name': 'rose 4', 'value': 30},
+        {'name': 'rose 5', 'value': 28},
+        {'name': 'rose 6', 'value': 26},
+        {'name': 'rose 7', 'value': 22},
+        {'name': 'rose 8', 'value': 18}]
+    return render_template("index.html", data=data)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True, port=8000)
