@@ -13,8 +13,15 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-for i in range(5):
-    print(' ' * (5 - i - 1) + '*' * (2 * i + 1))
 
-print(' ' * 4 + '|')
+
+
+from flask import Flask
+from app import create_app
+
+app = create_app()
+
+# 我們把原本的 @app.route() 分離出 2 個 Py 檔，一個是 __init__.py，建立 url 及 route 關聯。一個是 route.py 建立網頁的後端函數。
+
+if __name__ == "__main__":
+    app.run(debug=True, port=8000)
