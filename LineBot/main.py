@@ -13,6 +13,10 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
+# Flask + ECharts 資料視覺化
+# 教學出處網址
+# https://medium.com/%E5%B7%A5%E7%A8%8B%E9%9A%A8%E5%AF%AB%E7%AD%86%E8%A8%98/flask-echarts-%E8%B3%87%E6%96%99%E8%A6%96%E8%A6%BA%E5%8C%96-52e0784e1b7d
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 from flask import *
 
